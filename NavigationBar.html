@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <header>
+        <div class="container">
+            <img src="images/logo.png" alt="logo" class="logo">
+
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+
+        </div>
+    </header>
+
+
+
+    
+    <style>
+        body {
+            /* dark blue background */
+            background-color: #222;
+            margin: 0;
+            font-weight: 300;
+            font-family: 'Work Sans', sans-serif;
+        }
+        
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #55d6aa;
+
+        }
+
+        header::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+
+        .logo {
+            float: left;
+            padding: 10px 0;
+        }
+
+        nav {
+            float: right;
+            margin-top: 20px;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-left: 70px;
+
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding-top: 20px;
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        /* create nav a:hover with animation of changing color */
+        nav a:hover {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: 300;
+            background-color: #446b5e;
+            border-radius: 10px;
+            transition: all 0.3s;
+            /* change the color of the navbar on hover */
+            background-color: #39473c;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: 300;
+            
+
+        }
+        
+
+    </style>
+
+
+
+</body>
+</html>

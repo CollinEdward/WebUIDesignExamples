@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click the button</title>
+</head>
+<body>
+    
+    <!-- Make a button with id click_me-->
+    <button id="click_me">Click Me</button>
+
+    <style>
+        /* style body with dark blue background */
+        body {
+            background-color: #2c3e50;
+        }
+
+        /* style click_me button */
+        #click_me {
+            background-color: #724caf; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            /* center button in the middle of the screen */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* make button bigger */
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+            /* shadow */
+            box-shadow: 0px 0px 15px #000000;
+
+        }
+        /* click_me button hover */
+        #click_me:hover {
+
+            background-color: #724caf;
+            color: #2c3e50;
+
+            background-color: #311457;
+            color: white;
+            box-shadow: 0px 0px 20px #000000;
+            /* glow effect */
+            -webkit-animation: glow 3s ease-in-out infinite alternate;
+            -moz-animation: glow 3s ease-in-out infinite alternate;
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        /* click_me button animation */
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #744dff, 0 0 40px #744dff, 0 0 50px #744dff, 0 0 60px #744dff, 0 0 70px #744dff, 0 0 80px #744dff;
+            }
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #744dff, 0 0 40px #744dff, 0 0 50px #744dff, 0 0 60px #744dff, 0 0 70px #744dff, 0 0 80px #744dff;
+            }
+        }
+
+
+    </style>
+
+
+    <script>
+        // when button clicked change background color to light blue with animation and change text color to black and shadow to white smoothly and button color to dark purple with animation
+        document.getElementById("click_me").onclick = function() {
+            document.body.style.backgroundColor = "#724caf";
+            document.body.style.transition = "background-color 1s";
+            document.getElementById("click_me").style.transition = "color 1s";
+            document.getElementById("click_me").style.boxShadow = "0px 0px 20px #000000";
+            document.getElementById("click_me").style.transition = "box-shadow 1s";
+            document.getElementById("click_me").style.backgroundColor = "#311457";
+            document.getElementById("click_me").style.transition = "background-color 1s";
+
+            // write to the screen "button was clicked" with animation
+            document.getElementById("click_me").innerHTML = "Button was clicked";
+            document.getElementById("click_me").style.transition = "color 1s";
+            document.getElementById("click_me").style.color = "#2c3e50";
+            document.getElementById("click_me").style.transition = "color 1s";
+            
+        }
+    </script>
+
+</body>
+</html>

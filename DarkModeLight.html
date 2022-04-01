@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- button with id color_change -->
+    <button id="color_change">Change Color</button>
+
+    <!-- Make a switch -->
+    <input type="checkbox" id="switch">
+    <label for="switch">Dark/Light mode</label>
+
+
+    <style>
+        /* center checkbox to the middle of the page */
+        label {
+            display: block;
+            margin: 0 auto;
+        }
+
+        body {
+            /* dark blue background color */
+            background-color: #2c3e50;    
+        } 
+
+        /* button darker blue color */
+        #color_change {
+            background-color: #34495e;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            /* center button in middle of screen */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* make button bigger */
+            width: 200px;
+            height: 50px;
+ 
+        }
+
+        /* show when button is pressed */
+        #color_change:active {
+            background-color: #2c3e50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            /* center button in middle of screen */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* make button bigger */
+            width: 200px;
+            height: 50px;
+        }
+
+    </style>
+
+
+    <script>
+        // If button pressed, change everything to light blue with smooth animation
+        document.getElementById("color_change").onclick = function() {
+            document.body.style.backgroundColor = "#3498db";
+            document.getElementById("color_change").style.color = "#fff";
+            // with smooth animation 
+            document.body.style.transition = "background-color 1s";
+
+        }
+        // if button is presssed again, change everything to dark blue with smooth animation
+        document.getElementById("color_change").onclick = function() {
+            document.body.style.backgroundColor = "#2c3e50";
+            document.getElementById("color_change").style.color = "#fff";
+            // with smooth animation 
+            document.body.style.transition = "background-color 1s";
+        }
+        
+
+        // Check if switch is checked and change background color accordingly
+        document.getElementById("switch").onclick = function() {
+            if (document.getElementById("switch").checked) {
+                document.body.style.backgroundColor = "#2c3e50";
+                // with smooth animation
+                document.body.style.transition = "background-color 1s";
+
+            } else {
+                document.body.style.backgroundColor = "#3498db";
+                // with smooth animation
+                document.body.style.transition = "background-color 1s";
+            }
+        }
+
+
+
+        
+
+    </script>
+
+
+</body>
+</html>

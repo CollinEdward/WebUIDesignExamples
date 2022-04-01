@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- make 3 buttons with id grab1, 2 and 3-->
+    <button id="grab">This button is draggable</button>
+
+
+    <style>
+        /* style the button */
+        #grab {
+            font-size: 20px;
+            font-family: sans-serif;
+            color: rgb(161, 161, 161);
+            text-align: center;
+            /* animate the color of the text */
+            animation: colorChange 5s infinite;
+            /* center font to middle of screen */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* add a drop shadow */
+            box-shadow: 0px 0px 25px #000000;
+            /* make box-shadow bigger */
+            width: 500px;
+            height: 100px;
+            border-radius: 10px;
+            /* center text in boarder-box */
+            padding: 10px;
+            /* make borderbox dark blue */
+            background-color: #2c3e50;
+            /* make borderbox white */
+            border: 1px solid #606591;
+        }
+        body {
+            background-color: #2c3e50;
+            /* make the background fake out of the text */
+            background-image: linear-gradient(to right, #606591, #2c3e50);
+            /* make the background fake out of the text */
+            background-repeat: no-repeat;
+            /* make the background fake out of the text */
+            background-attachment: fixed;
+            /* make the background fake out of the text */
+            background-size: cover;
+        }
+
+
+    </style>
+
+    <script>
+
+        // make the button able to be moved around the screen by dragging it, when you click it, it isn't able to be moved
+        
+        document.getElementById("grab").onmousedown = function(e) {
+            var offsetX = e.clientX - this.offsetLeft;
+            var offsetY = e.clientY - this.offsetTop;
+            document.onmousemove = function(e) {
+                document.getElementById("grab").style.left = e.clientX - offsetX + "px";
+                document.getElementById("grab").style.top = e.clientY - offsetY + "px";
+            }
+        }
+
+        document.onmouseup = function() {
+            document.onmousemove = null;
+        } 
+
+
+
+    </script>
+
+
+
+</body>
+</html>

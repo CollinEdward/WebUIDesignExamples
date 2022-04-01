@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- make a login field -->
+    <form action="login.php" method="post">
+        <input type="text" name="username" placeholder="username">
+        <input type="password" name="password" placeholder="password">
+        <input type="submit" value="Login">
+    </form>
+
+    <style>
+        /* make the background fade out */
+        body {
+            background-image: url("https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #000;
+            color: #fff;
+        }
+        
+        /* style the username field */
+        input[type=text] {
+            width: 60%;
+            padding: 3px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            /* rounded corners */
+            border-radius: 5px;
+            /* background color of the field */
+            background-color: #666577;
+        }
+        input[type=password] {
+            width: 60%;
+            padding: 3px 20px;
+            margin: 1px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 5px;
+            /* background color of the field */
+            background-color: #666577;
+            
+        }
+
+/* style login button */
+        form input[type="submit"] {
+            background-color: #636174;
+            border: none;
+            color: white;
+            padding: 4 30px;
+            text-decoration: none;
+            cursor: pointer;
+            /* center button in middle of login field */
+            position: absolute;
+            top: 50%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+            /* make button bigger */
+            width: 100px;
+            height: 50px;
+            /* rounded corners */
+            border-radius: 10px;
+            /* border */
+            border: 1px solid #ccc;
+
+
+        }
+    
+    /* style the login field */
+        form {
+            margin: 0 auto;
+            width: 300px;
+            padding: 1em;
+            border: 1px solid #CCC;
+            border-radius: 1em;
+
+        /* center login field */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* darker blue background color */
+            background-color: #34495e;
+
+        }
+
+        body {
+            /* dark blue background color */
+            background-color: #2c3e50;    
+        }
+        
+    </style>
+
+</body>
+</html>

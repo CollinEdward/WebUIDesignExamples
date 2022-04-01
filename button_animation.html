@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Button with id ani_button -->
+    <button id="ani_button"></button>
+
+
+
+    <style>
+        /* style the button */
+        #ani_button {
+            background-color: #495249;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            /* rounded corners */
+            border-radius: 10px;
+            /* shadow */
+            box-shadow: 0px 0px 15px #000000;
+            /* center button in middle of screen */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* make button bigger */
+            width: 200px;
+            height: 50px;
+            /* animation */
+            -webkit-animation: glow 3s ease-in-out infinite alternate;
+            -moz-animation: glow 3s ease-in-out infinite alternate;
+            animation: glow 3s ease-in-out infinite alternate;
+            
+        }
+        /* button hover */
+        #ani_button:hover {
+            background-color: #505050;
+            color: #2c3e50;
+            box-shadow: 0px 0px 20px #000000;
+            /* glow effect */
+            -webkit-animation: glow 3s ease-in-out infinite alternate;
+            -moz-animation: glow 3s ease-in-out infinite alternate;
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        /* when button clicked, it disappears with animation */
+        #ani_button:active {
+            background-color: #202020;
+            color: #2c3e50;
+            box-shadow: 0px 0px 20px #000000;
+            /* glow effect */
+            -webkit-animation: glow 3s ease-in-out infinite alternate;
+            -moz-animation: glow 3s ease-in-out infinite alternate;
+            animation: glow 3s ease-in-out infinite alternate;
+            -webkit-animation-iteration-count: 1;
+            -moz-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+        }
+
+        body {
+            background-color: rgb(184, 184, 184);
+        }
+
+    </style>
+
+    <script>
+        // when button is clicked, it squizes and then expands again smoothly with animation
+        // when button is clicked, it disappears with animation
+        document.getElementById("ani_button").addEventListener("click", function() {
+            document.getElementById("ani_button").style.width = "0px";
+            document.getElementById("ani_button").style.height = "0px";
+            // make the animation smooth and not jump
+            document.getElementById("ani_button").style.transition = "all 0.2s ease-in-out";
+            // make the animation smooth and not jump
+            document.getElementById("ani_button").style.transitionDelay = "0.2s";
+            // make the animation smooth and not jump
+            document.getElementById("ani_button").style.transitionDuration = "0.2s";
+
+            setTimeout(function(){
+                document.getElementById("ani_button").style.width = "200px";
+                document.getElementById("ani_button").style.height = "50px";
+            }, 1000);
+        });
+                        
+    </script>
+
+</body>
+</html>
